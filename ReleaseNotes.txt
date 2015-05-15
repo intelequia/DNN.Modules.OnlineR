@@ -1,0 +1,22 @@
+﻿<h3>OnlineR</h3>
+<p class="Contributor">
+	Christoc.com <br />
+	<a href="mailto:modules@christoc.com">modules@christoc.com</a><br />
+	<a href=http://www.christoc.com>http://www.christoc.com</a><br />
+</p>
+<hr/>
+<div class="License">
+	<h3>About the OnlineR</h3>
+	<p class="Intelequia Software Solutions">
+		<b>Version 1.0</b><br /><br />
+	</p>
+	<p>Running on DNN 7.4 and .NET Framework 4.5.1</p>
+	
+	<h4>Bug Fixes</h4>
+	<ul>
+			<li> Fixed the no redirection to hubs in DNN 7</li>
+			<li> Added title and color customization</li>
+			<li> Themes Added </li>
+	</ul>
+	
+</div>
