@@ -1,0 +1,54 @@
+﻿.innerwrapper {
+    width: 20%;
+    float: left;
+    padding:0.5%;
+    margin-left: 40%;
+    margin-right: 40%;
+    -webkit-transition: all 2s ease-out;
+    transition: all 2s ease-out;
+    border-top:solid thin grey;
+    border-bottom:solid thin grey;
+}
+
+.usericon {
+    padding:1%;
+    width: 25%;
+    height:4em;
+    float: left;
+}
+
+.usericon img {
+    width:100%;
+    height: 100%;
+}
+
+.widget-title {
+      color:#787679;
+    margin:0;
+    float: right;
+    padding:1%;
+    width: 48%;
+    font-size:1em;
+    line-height:4em;
+    text-transform: uppercase;
+}
+
+.odometer {
+    float: right;
+    width:21%;
+    color:#787679;
+    padding:1%;
+    font-size:2em;
+    line-height:2em;
+    padding-bottom:-1px;
+    margin-bottom:-1px;
+}
+
+@media (max-width: 980px) {
+    .innerwrapper {
+        width:30%;
+        margin-left:35%;
+        margin-right:35%;
+    
+    }
+}

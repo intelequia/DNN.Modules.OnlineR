@@ -1,0 +1,6 @@
+C:\websites\dnndev.me\DesktopModules\OnlineR\obj\Debug\OnlineR.csprojResolveAssemblyReference.cache
+C:\websites\dnndev.me\bin\OnlineR.dll.config
+C:\websites\dnndev.me\bin\OnlineR.dll
+C:\websites\dnndev.me\bin\OnlineR.pdb
+C:\websites\dnndev.me\DesktopModules\OnlineR\obj\Debug\OnlineR.dll
+C:\websites\dnndev.me\DesktopModules\OnlineR\obj\Debug\OnlineR.pdb
