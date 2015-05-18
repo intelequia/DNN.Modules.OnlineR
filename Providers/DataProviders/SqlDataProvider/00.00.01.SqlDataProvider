@@ -1,0 +1,33 @@
+/************************************************************/
+/*****              SqlDataProvider                     *****/
+/*****                                                  *****/
+/*****                                                  *****/
+/***** Note: To manually execute this script you must   *****/
+/*****       perform a search and replace operation     *****/
+/*****       for {databaseOwner} and {objectQualifier}  *****/
+/*****                                                  *****/
+/************************************************************/
+
+insert into {databaseOwner}{objectQualifier}hostsettings
+(SettingName
+, SettingValue
+, SettingIsSecure 
+, CreatedByUserId
+, CreatedOnDate
+, LastModifiedByUserId
+, LastModifiedOnDate
+)
+values(
+'AUM_DoNotRewriteRegEx'
+,'/DesktopModules/|/Providers|/LinkClick\.aspx|/SignalR'
+, 0
+, -1
+, GETDATE()
+, -1
+, GETDATE()
+)
+
+
+/************************************************************/
+/*****              SqlDataProvider                     *****/
+/************************************************************/
