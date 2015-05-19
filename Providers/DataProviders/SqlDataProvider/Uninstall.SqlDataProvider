@@ -11,7 +11,7 @@
 DELETE FROM {databaseOwner}{objectQualifier}hostsettings
 WHERE SettingName='AUM_DoNotRewriteRegEx';
 
-
+DROP TABLE "OnlineR_RegOnlineUsers";
 /************************************************************/
 /*****              SqlDataProvider                     *****/
 /************************************************************/

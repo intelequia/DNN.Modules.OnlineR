@@ -8,7 +8,7 @@
 <head>
     <title>SignalR Counter</title>
     <link rel="stylesheet" type="text/css" href="/DesktopModules/OnlineR/Odometer.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="/DesktopModules/OnlineR//<%=selectedSkin%>" media="screen" />
+    <link rel="stylesheet" type="text/css" href="/DesktopModules/OnlineR/Skins/<%=selectedSkin%>" media="screen" />
 </head>
 
 <body>

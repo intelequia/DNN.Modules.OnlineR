@@ -16,5 +16,6 @@ namespace Christoc.Modules.OnlineR.Components
             ValidationSettings.UnobtrusiveValidationMode = System.Web.UI.UnobtrusiveValidationMode.None; // Permits the use of settings 
             app.MapSignalR();         // Maps the SignalR hubs
         }
+
     }
 }
