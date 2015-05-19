@@ -27,6 +27,12 @@ values(
 , GETDATE()
 )
 
+CREATE TABLE OnlineR_RegOnlineUsers
+(
+RegId int IDENTITY(1,1) PRIMARY KEY,
+RegDate TIMESTAMP,
+RegOnline INT,
+);
 
 /************************************************************/
 /*****              SqlDataProvider                     *****/

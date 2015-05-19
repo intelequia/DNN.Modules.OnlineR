@@ -89,6 +89,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Components\FeatureController.cs" />
+    <Compile Include="Components\RegUsersOnLine.cs" />
+    <Compile Include="Components\RegUsersOnLineController.cs" />
     <Compile Include="Components\Startup.cs" />
     <Compile Include="Components\UsersOnLine.cs" />
     <Compile Include="Data\DataProvider.cs" />
@@ -129,9 +131,9 @@
     <Content Include="images\icon.png" />
     <Content Include="images\fa-user.png" />
     <Content Include="License.txt" />
-    <Content Include="module.css" />
-    <Content Include="Odometer.css" />
-    <Content Include="OnlyNumber.css" />
+    <Content Include="Skins\module.css" />
+    <Content Include="Skins\Odometer.css" />
+    <Content Include="Skins\OnlyNumber.css" />
     <Content Include="ReleaseNotes.txt" />
     <None Include="Scripts\jquery-1.6.4-vsdoc.js" />
     <Content Include="Scripts\jquery-1.6.4.js" />
@@ -140,10 +142,10 @@
     <Content Include="Scripts\jquery.signalR-2.2.0.min.js" />
     <Content Include="Scripts\odometer.js" />
     <Content Include="Settings.ascx" />
-    <Content Include="Material.css" />
-    <Content Include="Minimalist.css" />
-    <Content Include="Social.css" />
-    <Content Include="Tile.css" />
+    <Content Include="Skins\Material.css" />
+    <Content Include="Skins\Minimalist.css" />
+    <Content Include="Skins\Social.css" />
+    <Content Include="Skins\Tile.css" />
     <Content Include="View.ascx" />
   </ItemGroup>
   <ItemGroup>
