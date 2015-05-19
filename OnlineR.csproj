@@ -131,8 +131,12 @@
     <Content Include="images\icon.png" />
     <Content Include="images\fa-user.png" />
     <Content Include="License.txt" />
+<<<<<<< HEAD
     <Content Include="Odometer.css" />
     <Content Include="module.css" />
+=======
+    <Content Include="Skins\module.css" />
+>>>>>>> parent of 4f61124... Revert "Skin Folder Added"
     <Content Include="Skins\Odometer.css" />
     <Content Include="Skins\OnlyNumber.css" />
     <Content Include="ReleaseNotes.txt" />
