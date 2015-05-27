@@ -51,8 +51,7 @@ namespace Christoc.Modules.OnlineR
              {
                  if (Page.IsPostBack == false)
                  {
-                     //Check for existing settings and use those on this page
-                     //Settings["SettingName"]                  
+                     //Check for existing settings and use those on this page               
                      txtTitle.Text = Settings.Contains("onlinerTitle") ? Settings["onlinerTitle"].ToString() : Localization.GetString("onlinerTitle", "/DesktopModules/OnlineR/App_LocalResources/Settings.ascx.resx");
                      txtPrimaryColor.Text = Settings.Contains("primaryColor") ? Settings["primaryColor"].ToString() : Localization.GetString("primaryColor", "/DesktopModules/OnlineR/App_LocalResources/Settings.ascx.resx");
                      String selectedSkin = Settings.Contains("selectedSkin") ? Settings["selectedSkin"].ToString() : Localization.GetString("selectedSkin", "/DesktopModules/OnlineR/App_LocalResources/Settings.ascx.resx");
@@ -82,7 +81,7 @@ namespace Christoc.Modules.OnlineR
              {
                  var modules = new ModuleController();
                  modules.UpdateModuleSetting(ModuleId, "onlinerTitle", txtTitle.Text);
-                 modules.UpdateModuleSetting(ModuleId, "primaryColor", txtPrimaryColor.Text);
+                 modules.UpdateModuleSetting(ModuleId, "primaryColor", txtPrimaryColor.Text); // Update this settings in the local resorce (App_LocalResources)
                  modules.UpdateModuleSetting(ModuleId, "selectedSkin", ddlSelectedSkin.SelectedValue);
              }
              catch (Exception exc) //Module failed to load

@@ -30,7 +30,7 @@ values(
 CREATE TABLE OnlineR_RegOnlineUsers
 (
 RegId int IDENTITY(1,1) PRIMARY KEY,
-RegDate TIMESTAMP,
+RegDate DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
 RegOnline INT,
 );
 

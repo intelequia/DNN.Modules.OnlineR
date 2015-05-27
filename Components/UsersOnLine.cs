@@ -10,7 +10,7 @@ namespace Christoc.Modules.OnlineR.Components
 
     public class UsersOnLine : Hub                           // Hub definition
     {
-        static List<string> users=new List<string>();
+        public static List<string> users=new List<string>();
 
         public override System.Threading.Tasks.Task OnConnected()
         {
@@ -34,7 +34,6 @@ namespace Christoc.Modules.OnlineR.Components
             }
 
             ShowUsersOnLine();
-        
             return base.OnReconnected();
         }
 

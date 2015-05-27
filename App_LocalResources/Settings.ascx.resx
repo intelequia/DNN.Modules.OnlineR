@@ -132,6 +132,12 @@
   <data name="lblSelectedSkin.Text" xml:space="preserve">
     <value> Select a skin</value>
   </data>
+  <data name="lblTimer" xml:space="preserve">
+    <value>Keep records of users online every (minutes)</value>
+  </data>
+  <data name="lblTimer.Help" xml:space="preserve">
+    <value>Save online user registry in the database to be used in the generation of module statistics</value>
+  </data>
   <data name="lblTitle.Help" xml:space="preserve">
     <value>Put the title of your OnlineR here.</value>
   </data>
@@ -140,6 +146,9 @@
   </data>
   <data name="onlinerTitle" xml:space="preserve">
     <value>Users Online</value>
+  </data>
+  <data name="ouTimer" xml:space="preserve">
+    <value>5</value>
   </data>
   <data name="primaryColor" xml:space="preserve">
     <value>#8BC34A</value>

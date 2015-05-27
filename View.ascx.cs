@@ -11,11 +11,14 @@
 */
 
 using System;
+using System.Timers;
 using DotNetNuke.Security;
 using DotNetNuke.Services.Exceptions;
 using DotNetNuke.Entities.Modules;
 using DotNetNuke.Entities.Modules.Actions;
 using DotNetNuke.Services.Localization;
+using Christoc.Modules.OnlineR.Components;
+using Microsoft.AspNet.SignalR;
 
 namespace Christoc.Modules.OnlineR
 {
@@ -40,16 +43,16 @@ namespace Christoc.Modules.OnlineR
         protected void Page_Load(object sender, EventArgs e)
         {
             try //Load Resources, if they don't exist, load default settings
-            { 
-               onlinerTitle = Settings.Contains("onlinerTitle") ? Settings["onlinerTitle"].ToString() : Localization.GetString("onlinerTitle", LocalResourceFile);
-               if (String.IsNullOrEmpty(onlinerTitle))
-                   onlinerTitle = "Online Users";
-               primaryColor = Settings.Contains("primaryColor") ? Settings["primaryColor"].ToString() : Localization.GetString("primaryColor", LocalResourceFile);
-               if (String.IsNullOrEmpty(primaryColor))
-                   primaryColor = "#009688";
-               selectedSkin = Settings.Contains("selectedSkin") ? Settings["selectedSkin"].ToString() : Localization.GetString("selectedSkin", LocalResourceFile);
-               if (String.IsNullOrEmpty(selectedSkin))
-                   selectedSkin = "Material.css";
+            {
+                onlinerTitle = Settings.Contains("onlinerTitle") ? Settings["onlinerTitle"].ToString() : Localization.GetString("onlinerTitle", LocalResourceFile);
+                if (String.IsNullOrEmpty(onlinerTitle))
+                    onlinerTitle = "Online Users";
+                primaryColor = Settings.Contains("primaryColor") ? Settings["primaryColor"].ToString() : Localization.GetString("primaryColor", LocalResourceFile);
+                if (String.IsNullOrEmpty(primaryColor))
+                    primaryColor = "#009688";
+                selectedSkin = Settings.Contains("selectedSkin") ? Settings["selectedSkin"].ToString() : Localization.GetString("selectedSkin", LocalResourceFile);
+                if (String.IsNullOrEmpty(selectedSkin))
+                    selectedSkin = "Material.css";
             }
             catch (Exception exc) //Module failed to load
             {

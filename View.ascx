@@ -18,7 +18,6 @@
         </div>
         <h2 class="widget-title grey"><%=onlinerTitle%></h2>
         <div class="odometer odometer-theme-minimal fontgrey" id="counter"></div>
-        <div class="sqlusers"></div>
     </div>
     <script type="text/javascript">
         $(function () {

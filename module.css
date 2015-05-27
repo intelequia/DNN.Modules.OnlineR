@@ -3,6 +3,39 @@ body *{
     margin:0;
     padding:0;
     font-family: 'Roboto', sans-serif;
+    -webkit-user-select: none;
     -webkit-font-smoothing: antialiased;
     text-align:center;
+}
+/* Edit rules*/
+#nusers{
+  cursor: default;
+  font-family: 'Roboto2';
+  font-size: 16px;
+  color:#757575;
+  text-align:left;
+  margin-bottom:4px;
+}
+#onlinerMaxUsers{
+    margin:0 auto;
+    width:90%;
+    margin-top:2%;
+}
+#onlinerMaxUsers div{
+    font-size:14px;
+    margin-top:0;
+    text-align:left;
+    color:#BDBDBD;
+}
+#onlinerMaxUsers div span{
+    color:#4285F4;
+}
+#chart_div{
+    width:90%;
+    margin:0 auto;
+    margin-top:2%;
+    height:30em;
+}
+#ui-id-5{
+    display: none;
 }
