@@ -23,29 +23,28 @@
         $(function () {
             var usr = $.connection.usersOnLine;
             usr.client.showUsersOnLine = function (data) {  
-                data = data - 1;
                 // Change styles depend of the style selected
                 if ('<%=this.selectedSkin %>' == 'Tile.css') {
-                    if (data > 0) 
+                    if (data > 4) 
                         $('.innerwrapper').css("background-color", '<%=this.primaryColor %>');
                     else
                         $('.innerwrapper').css("background-color", "#BDBDBD");
                 }
                 else if ('<%=this.selectedSkin %>' == 'OnlyNumber.css') {
-                    if (data > 0) 
+                    if (data > 4) 
                         $('.odometer').css("background-color", '<%=this.primaryColor %>');
                     else 
                         $('.odometer').css("background-color", "#BDBDBD");
                 }
                 else if ('<%=this.selectedSkin %>' == 'Social.css') {
-                    if (data > 0) 
+                    if (data > 4) 
                         $('.usericon').css("background-color", '<%=this.primaryColor %>');
                     else 
                         $('.usericon').css("background-color", "#BDBDBD");
                 }
                 else
                 {
-                    if (data > 0) {
+                    if (data > 4) {
                         $('.usericon').css("background-color", '<%=this.primaryColor %>');
                         $('.widget-title').css("background-color", '<%=this.primaryColor %>');
                         $('.odometer').css("color", '<%=this.primaryColor %>');

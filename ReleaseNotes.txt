@@ -21,5 +21,6 @@
 	<h4>Bug Fixes</h4>
 		<ul>
 			<li> Fixed the no redirection to hubs in DNN 7</li>
+			<li> Fixed Azure SQL compatibility problem </li>
 		</ul>	
 </div>
