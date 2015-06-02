@@ -8,13 +8,18 @@ body *{
     text-align:center;
 }
 /* Edit rules*/
-#nusers{
+.nusers{
   cursor: default;
   font-family: 'Roboto2';
   font-size: 16px;
   color:#757575;
   text-align:left;
   margin-bottom:4px;
+}
+#graph{
+    margin-top:19px;
+    margin-left:5%;
+    margin-right:5%;
 }
 #onlinerMaxUsers{
     margin:0 auto;
@@ -30,11 +35,19 @@ body *{
 #onlinerMaxUsers div span{
     color:#4285F4;
 }
+#dashboard_div{
+    width:100%;
+}
 #chart_div{
     width:90%;
     margin:0 auto;
     margin-top:2%;
-    height:30em;
+    height:20em;
+}
+#filter_div{
+    height:3em;
+    width:90%;
+    margin:0 auto;
 }
 #ui-id-5{
     display: none;

@@ -8,15 +8,16 @@
 <div class="License">
 	<h3>About the OnlineR</h3>
 	<p class="Intelequia Software Solutions">
-		<b>Version 1.5</b><br /><br />
+		<b>Version 1.8</b><br /><br />
 	</p>
 	<p>Running on DNN 7.4 and .NET Framework 4.5.1</p>
-	<h4> Improvements </h4>
+	<h4> Recent Improvements </h4>
 		<ul>
 			<li> Added title and color customization</li>
 			<li> Themes Added </li>
-			<li> Added max users stadistics on Edit Section </li>
-			<li> Added online users per day graph in stadistics Edit Section </li>
+			<li> Added max users statistics on Edit Section </li>
+			<li> Users per day graphic changed by users per year</li>
+			<li> Added slider filter to the graphic for better data researching </li>
 		</ul>
 	<h4>Bug Fixes</h4>
 		<ul>

@@ -1,6 +1,6 @@
 <dotnetnuke type="Package" version="5.0">
   <packages>
-    <package name="OnlineR" type="Module" version="00.01.07">
+    <package name="OnlineR" type="Module" version="00.01.08">
       <friendlyName>OnlineR</friendlyName>
       <description>A Online Users Counter module for DotNetNuke using SignalR</description>
       <iconFile>images/icon.png</iconFile>

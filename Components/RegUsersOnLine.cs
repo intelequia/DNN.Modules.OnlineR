@@ -10,7 +10,7 @@ namespace Christoc.Modules.OnlineR.Components
     [PrimaryKey("RegId", AutoIncrement = true)]
 
     // configure caching using PetaPoco
-    // [Cacheable("Messages", CacheItemPriority.Default, 20)]
+    //[Cacheable("RegUsersOnLine", CacheItemPriority.Default, 20)]
 
     // scope the objects to the ModuleId of a module on a page (or copy of a module on a page)
     [Scope("ModuleId")]

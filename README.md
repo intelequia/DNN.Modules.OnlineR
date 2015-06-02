@@ -31,6 +31,16 @@ Onliner module provides built-in skins that you can select and customize:
  
  * Finally go to OnlineR Settings tab and customize your title, your primary color, and choose one of the integrated skins.
  
-# Demo #
+ 
+# Get information from your site #
+
+This module also lets you know the statistics of online users on your site.
+
+ * To check it use the Edit button on the module page editing mode.
+ 
+ * Adjust the bottom range filter to obtain the information desired.
+ 
+ 
+## Demo ##
 If you want to know more try to visit this website demo from two diferent clients http://onliner.azurewebsites.net/
 Hosted by Microsoft Azure

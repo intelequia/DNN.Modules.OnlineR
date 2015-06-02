@@ -37,19 +37,25 @@ namespace Christoc.Modules.OnlineR
         public int maxUsersMonth;
         public int maxUsersWeek;
         public string json;
+
+
         protected void Page_Load(object sender, EventArgs e)
         {
             try
             {
+                // Casting the RegUsersOnLineController results
                 RegUsersOnLineController rc = new RegUsersOnLineController(); // Create the controller object
                 List<int> resultYear = rc.GetMaxUsersYear().ToList();         // Convert Ienumerable in a list<int> 
                 maxUsersYear = resultYear.First();                            // Extract from the list the first value
-                List<int> resultMonth = rc.GetMaxUsersMonth().ToList();         // Convert Ienumerable in a list<int> 
+                List<int> resultMonth = rc.GetMaxUsersMonth().ToList();       // Convert Ienumerable in a list<int> 
                 maxUsersMonth = resultMonth.First();
-                List<int> resultWeek = rc.GetMaxUsersWeek().ToList();         // Convert Ienumerable in a list<int> 
+                List<int> resultWeek = rc.GetMaxUsersWeek().ToList();        
                 maxUsersWeek = resultWeek.First();
-                List<RegUsersOnLine> resultdata = rc.GetUsersThisDay().ToList();
+
+                // Get the current year data
+                List<RegUsersOnLine> resultdata = rc.GetUsersThisYear().ToList();
                 json = JsonConvert.SerializeObject(resultdata, Formatting.Indented); // Convert the List into a Json that will be used in the client side
+
             }
             catch (Exception exc) //Module failed to load
             {

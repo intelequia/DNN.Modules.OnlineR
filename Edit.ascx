@@ -3,7 +3,7 @@
 <h2 id="dnnSitePanel-onlineUsersData" class="dnnFormSectionHead">OnlineR Statistics</h2>
 
 <fieldset id="onlinerMaxUsers">
-    <p id="nusers">Maximum number of users</p>
+    <p class="nusers">Maximum number of users</p>
     <div class="dnnFormItem">
         <div>This year: <span><%=maxUsersYear %></span></div>
     </div>
@@ -16,33 +16,62 @@
 </fieldset>
 
 <fieldset>
- <script type="text/javascript">
-     var json = <%=json %>       // Load the json from the server side
-     google.load('visualization', '1.1', { packages: ['line'] });
-     google.setOnLoadCallback(drawChart);
-
-     function drawChart() {
-         var data = new google.visualization.DataTable();
-         data.addColumn('datetime', 'Day hours');
-         data.addColumn('number', 'Online Users Today');
-
-         for (var i = 0; i < json.length; i++) {
-             var arrayaux = [new Date(json[i].RegDate), parseInt(json[i].RegOnline)]; // Store the data from the json in a auxiliar array
-             data.addRow(arrayaux); // Add the row to the chart data
-         }
-         var options = {
-             timeline: {
-                groupByRowLabel: true
-             },
-             chart: {
-                title: 'Graphical user traffic on the present day',
-                subtitle: 'Indicates the number of users online every 5 minutes.'
-            },
-         };
-
-     var chart = new google.charts.Line(document.getElementById("chart_div"));
-     chart.draw(data, options);
-     }
-</script>
-    <div id="chart_div"></div>
+   <div id="dashboard_div">
+            <p id="graph" class="nusers"> This Year Statistics</p>
+            <div id="chart_div"></div>
+            <div id="filter_div"></div>
+    </div>
 </fieldset>
+ 
+
+<script type="text/javascript">
+    var json = <%=json %>       // Load the json from the server side
+
+    // ================================================================================================= //
+    // Google chart creation
+    // ================================================================================================= //
+    google.load('visualization', '1.1', { packages: ['controls'] });
+    google.setOnLoadCallback(drawDashboard);
+    function drawDashboard() {
+        // Create the data table
+        var data = new google.visualization.DataTable();
+        data.addColumn('datetime', 'Date');
+        data.addColumn('number', 'Online users');
+
+        for (var i = 0; i < json.length; i++) {
+            var arrayaux = [new Date(json[i].RegDate), parseInt(json[i].RegOnline)]; // Store the data from the json in a auxiliar array
+            data.addRow(arrayaux); // Add the row to the table
+        }
+        // Create the dashboard
+        var dashboard = new google.visualization.Dashboard(
+        document.getElementById('dashboard_div'));
+
+        //Create a range slider
+        var regRangeSlider = new google.visualization.ControlWrapper({
+            'controlType': 'ChartRangeFilter',
+            'containerId': 'filter_div',
+            'options': {
+                'filterColumnLabel': 'Date',
+                'height': '200',
+                'ui': {
+                    'minRangeSize': 3600000
+                }
+            }
+        });
+        //Create a wrapper for the elements
+        var regChart = new google.visualization.ChartWrapper({
+            'chartType': 'Line',
+            'containerId': 'chart_div',
+            'options': {
+                'legend': {
+                    'position': 'none'
+                }
+
+            }
+        });
+        // Bind the filter to the chart and draw the data
+        dashboard.bind(regRangeSlider, regChart)
+        dashboard.draw(data);
+
+    }
+</script>

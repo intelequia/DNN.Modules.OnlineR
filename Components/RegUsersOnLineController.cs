@@ -25,8 +25,6 @@ namespace Christoc.Modules.OnlineR.Components
         {
             using (IDataContext ctx = DataContext.Instance())
             {
-            /*SELECT MAX(RegOnline) FROM OnlineR_RegOnlineUsers
-                  WHERE datepart(year, RegDate) = datepart(year, getdate())*/
                 string lcSql = ("SELECT MAX(RegOnline)" +
                 "FROM  {databaseOwner}[{objectQualifier}OnlineR_RegOnlineUsers]" +
                 "WHERE DATEDIFF( yy, RegDate, GETDATE() ) = 0");
@@ -58,13 +56,13 @@ namespace Christoc.Modules.OnlineR.Components
             }
         }
 
-        // Get the list of users online between 2 dates
-        public IEnumerable<RegUsersOnLine> GetUsersThisDay()
+        // Get the list of registers from this year
+        public IEnumerable<RegUsersOnLine> GetUsersThisYear()
         {
             using (IDataContext ctx = DataContext.Instance())
             {
                 var rep = ctx.GetRepository<RegUsersOnLine>();
-                return rep.Find("WHERE DATEDIFF( d, RegDate, GETDATE() ) = 0", true);
+                return rep.Find("WHERE DATEDIFF( YEAR, RegDate, GETDATE() ) = 0", true);
             }
         }
     }
